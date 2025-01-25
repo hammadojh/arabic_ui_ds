@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Schema for UI elements within app screens",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the UI element"
+        },
+        "screen_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Reference to the screen containing this element"
+        },
+        "type": {
+            "type": "string",
+            "description": "Type of UI element",
+            "enum": [
+                "Accordion", "Button", "Checkbox", "Color Picker", "Date Picker", 
+                "Floating Action Button", "Radio Button", "Search Bar", "Segmented Control",
+                "Slider", "Stepper", "Switch", "Tab", "Text Field", "Tile", "Time Picker",
+                "Badge", "Banner", "Card", "Carousel", "Chip", "Divider", "Gallery",
+                "Loading Indicator", "Map Pin", "Progress Indicator", "Side Navigation",
+                "Skeleton", "Stacked List", "Status Dot", "Tab Bar", "Table", "Toolbar",
+                "Top Navigation Bar", "Bottom Sheet", "Coach Marks", "Dialog", "Drawer",
+                "Dropdown Menu", "Full-Screen Overlay", "Toast", "Tooltip",
+                "Avatar", "Icon", "Illustration", "Logo", "Photo"
+            ],
+            "errorMessage": "Element type must be one of the predefined types from ELEMENTS_ENUM"
+        },
+        "position": {
+            "type": "object",
+            "description": "Position and size of the element on screen",
+            "properties": {
+                "x": {
+                    "type": "integer",
+                    "description": "Horizontal position from left"
+                },
+                "y": {
+                    "type": "integer",
+                    "description": "Vertical position from top"
+                },
+                "width": {
+                    "type": "integer",
+                    "description": "Width of the element"
+                },
+                "height": {
+                    "type": "integer",
+                    "description": "Height of the element"
+                }
+            },
+            "required": ["x", "y", "width", "height"]
+        }
+    },
+    "required": ["id", "screen_id", "type", "position"]
+}

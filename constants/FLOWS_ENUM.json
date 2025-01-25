@@ -1,0 +1,86 @@
+{
+    "flows": {
+        "New User Experience": [
+            "Browsing Tutorial",
+            "Creating Account",
+            "Onboarding"
+        ],
+        "Account Management": [
+            "Editing Profile",
+            "Deleting & Deactivating Account",
+            "Logging In",
+            "Logging Out",
+            "Resetting Password",
+            "Switching Account"
+        ],
+        "Commerce & Finance": [
+            "Adding to Cart & Bag",
+            "Booking & Reserving",
+            "Canceling Order & Refunding",
+            "Canceling Subscription",
+            "Listing",
+            "Purchasing & Ordering",
+            "Redeeming",
+            "Subscribing & Upgrading",
+            "Transferring Money & Donating"
+        ],
+        "Social": [
+            "Banning & Blocking",
+            "Calling",
+            "Chatting & Sending Messages",
+            "Commenting & Replying",
+            "Following & Subscribing",
+            "Gifting",
+            "Giving Feedback",
+            "Inviting Teammates & Friends",
+            "Joining & Accepting",
+            "Leaving",
+            "Liking & Upvoting",
+            "Muting",
+            "Referring Friends",
+            "Registering",
+            "Reporting",
+            "Requesting",
+            "Reviewing & Rating",
+            "Scheduling",
+            "Sharing"
+        ],
+        "Content": [
+            "Adding & Creating",
+            "Archiving",
+            "Copying & Duplicating",
+            "Deleting & Removing",
+            "Drawing",
+            "Editing & Updating",
+            "Filtering & Sorting",
+            "Importing & Exporting",
+            "Listening to Audio",
+            "Logging & Tracking",
+            "Marking",
+            "Moving",
+            "Pinning",
+            "Publishing",
+            "Recording Audio & Video",
+            "Reordering",
+            "Saving to Collection",
+            "Scanning",
+            "Searching & Finding",
+            "Selecting & Choosing",
+            "Starting & Completing",
+            "Taking Photos",
+            "Uploading & Downloading",
+            "Watching Video"
+        ],
+        "Misc": [
+            "Connecting & Linking",
+            "Enabling & Disabling",
+            "Setting Up",
+            "Showing & Hiding",
+            "Switching to Dark Mode",
+            "Switching View",
+            "Turning On/Off",
+            "Verifying",
+            "Misc"
+        ]
+    }
+}

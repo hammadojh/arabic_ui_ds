@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Schema for mobile application metadata",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the application"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the application"
+        },
+        "category": {
+            "type": "string",
+            "description": "Category/genre of the application",
+            "enum": [
+                "Artificial Intelligence",
+                "Business",
+                "Collaboration",
+                "Communication",
+                "CRM",
+                "Crypto & Web3",
+                "Developer Tools",
+                "Education",
+                "Entertainment",
+                "Finance",
+                "Food & Drink",
+                "Graphics & Design",
+                "Health & Fitness",
+                "Jobs & Recruitment",
+                "Lifestyle",
+                "Medical",
+                "Music & Audio",
+                "Maps & Navigation",
+                "News",
+                "Photo & Video",
+                "Productivity",
+                "Real Estate",
+                "Reference",
+                "Shopping",
+                "Social Networking",
+                "Sports",
+                "Travel & Transportation",
+                "Utilities"
+            ],
+            "errorMessage": "Category must be one of the predefined categories from CATEGORIES_ENUM"
+        },
+        "platform": {
+            "type": "string",
+            "description": "Operating system/platform the app runs on (e.g., iOS, Android)"
+        },
+        "developer": {
+            "type": "string",
+            "description": "Name of the app developer or company"
+        },
+        "release_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Initial release date of the application"
+        },
+        "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "Official website URL for the application"
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed description of the application"
+        },
+        "app_icon": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the application's icon image"
+        }
+    },
+    "required": ["id", "name", "category", "platform"]
+}

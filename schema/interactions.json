@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Schema for user interactions with UI elements",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the interaction"
+        },
+        "element_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Reference to the UI element being interacted with"
+        },
+        "interaction_type": {
+            "type": "string",
+            "description": "Type of interaction with the UI element",
+            "enum": [
+                "Tap", "Double Tap", "Long Press", "Swipe Left", "Swipe Right",
+                "Swipe Up", "Swipe Down", "Pinch In", "Pinch Out", "Pan", "Drag", "Drop",
+                "Type", "Select", "Multi-Select", "Check", "Uncheck", "Toggle On",
+                "Toggle Off", "Radio Select", "Slider Change", "Date Select", "Time Select",
+                "Color Select", "File Upload", "Clear Input", "Copy", "Paste", "Cut",
+                "Navigate Back", "Navigate Forward", "Close", "Minimize", "Maximize",
+                "Scroll Up", "Scroll Down", "Scroll To Top", "Scroll To Bottom",
+                "Tab Switch", "Menu Open", "Menu Close", "Drawer Open", "Drawer Close",
+                "Modal Open", "Modal Close", "Refresh Page", "External Link",
+                "Play", "Pause", "Stop", "Seek Forward", "Seek Backward",
+                "Volume Up", "Volume Down", "Mute", "Unmute", "Full Screen",
+                "Exit Full Screen", "Capture Photo", "Record Video", "Record Audio",
+                "Share", "Save", "Bookmark", "Like", "Unlike", "Follow", "Unfollow",
+                "Comment", "Reply", "Edit", "Delete", "Archive", "Unarchive",
+                "Report", "Block", "Filter", "Sort", "Search", "Download", "Print"
+            ],
+            "errorMessage": "Interaction type must be one of the predefined types from INTERACTIONS_ENUM"
+        },
+        "target_screen_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Reference to the destination screen after interaction"
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed description of the interaction"
+        }
+    },
+    "required": ["id", "element_id", "interaction_type"]
+}

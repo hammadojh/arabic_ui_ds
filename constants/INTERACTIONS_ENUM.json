@@ -1,0 +1,57 @@
+{
+    "interactions": {
+        "Touch": [
+            "Tap",
+            "Double Tap",
+            "Long Press",
+            "Swipe Left",
+            "Swipe Right",
+            "Swipe Up",
+            "Swipe Down",
+            "Pinch In",
+            "Pinch Out",
+            "Pan",
+            "Drag",
+            "Drop"
+        ],
+        "Input": [
+            "Type",
+            "Select",
+            "Multi-Select",
+            "Check",
+            "Uncheck",
+            "Toggle On",
+            "Toggle Off",
+            "Radio Select",
+            "Slider Change",
+            "Date Select",
+            "Time Select",
+            "Color Select",
+            "File Upload",
+            "Clear Input",
+            "Copy",
+            "Paste",
+            "Cut"
+        ],
+        "Navigation": [
+            "Navigate Back",
+            "Navigate Forward",
+            "Close",
+            "Minimize",
+            "Maximize",
+            "Scroll Up",
+            "Scroll Down",
+            "Scroll To Top",
+            "Scroll To Bottom",
+            "Tab Switch",
+            "Menu Open",
+            "Menu Close",
+            "Drawer Open",
+            "Drawer Close",
+            "Modal Open",
+            "Modal Close",
+            "Refresh Page",
+            "External Link"
+        ]
+    }
+} 

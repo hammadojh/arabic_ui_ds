@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Schema for application screens/views",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the screen"
+        },
+        "app_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Reference to the parent application"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the screen"
+        },
+        "screen_type": {
+            "type": "string",
+            "description": "Type of screen",
+            "enum": [
+                "Account Setup", "Guided Tour & Tutorial", "Launch Screen", "Signup",
+                "Verification", "Walkthrough", "Welcome & Get Started", "Delete & Deactivate Account",
+                "Forgot Password", "Login", "My Account & Profile", "Settings & Preferences",
+                "About", "Acknowledgement & Success", "Action Option", "Confirmation",
+                "Empty State", "Error", "Feature Info", "Feedback", "Help & Support",
+                "Loading", "Permission", "Privacy Policy", "Pull to Refresh",
+                "Suggestions & Similar Items", "Terms & Conditions", "Billing", "Cart & Bag",
+                "Checkout", "Order Confirmation", "Order Detail", "Order History",
+                "Payment Method", "Pricing", "Promotions & Rewards", "Shop & Storefront",
+                "Subscription & Paywall", "Wallet & Balance", "Achievements & Awards",
+                "Chat Detail", "Comments", "Followers & Following", "Groups & Community",
+                "Invite Teammates", "Leaderboard", "Notifications", "Reviews & Ratings",
+                "Social Feed", "User / Group Profile", "Article Detail", "Augmented Reality",
+                "Browse & Discover", "Class & Lesson Detail", "Emails & Messages",
+                "Event Detail", "Goal & Task", "Home", "News Feed", "Note Detail",
+                "Other Content", "Post Detail", "Product Detail", "Quiz", "Recipe Detail",
+                "Song & Podcast Detail", "Stories", "TV Show & Movie Detail",
+                "Add & Create", "Ban & Block", "Cancel", "Delete", "Draw & Annotate",
+                "Edit", "Favorite & Pin", "Filter & Sort", "Flag & Report",
+                "Follow & Subscribe", "Invite & Refer Friends", "Like & Upvote",
+                "Move", "Reorder", "Save", "Search", "Select", "Set", "Share",
+                "Transfer & Send Money", "Upload & Download", "Charts", "Dashboard",
+                "Progress", "Bookmarks & Collections", "Downloads & Available Offline",
+                "Playlists", "Trash & Archive", "Audio Player", "Audio & Video Recorder",
+                "Browser", "Calendar", "Camera & Scanner", "Chat Bot", "Date & Time",
+                "Filters & Stickers", "Location & Address", "Map", "Reminder",
+                "Timer & Clock", "Video Player"
+            ],
+            "errorMessage": "Screen type must be one of the predefined types from SCREENS_ENUM"
+        },
+        "image_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the screen's screenshot or mockup"
+        },
+        "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of when the screen was last updated"
+        }
+    },
+    "required": ["id", "app_id", "name", "screen_type"]
+}

@@ -1,0 +1,59 @@
+{
+    "elements": {
+        "Control": [
+            "Accordion",
+            "Button",
+            "Checkbox",
+            "Color Picker",
+            "Date Picker",
+            "Floating Action Button",
+            "Radio Button",
+            "Search Bar",
+            "Segmented Control",
+            "Slider",
+            "Stepper",
+            "Switch",
+            "Tab",
+            "Text Field",
+            "Tile",
+            "Time Picker"
+        ],
+        "View": [
+            "Badge",
+            "Banner",
+            "Card",
+            "Carousel",
+            "Chip",
+            "Divider",
+            "Gallery",
+            "Loading Indicator",
+            "Map Pin",
+            "Progress Indicator",
+            "Side Navigation",
+            "Skeleton",
+            "Stacked List",
+            "Status Dot",
+            "Tab Bar",
+            "Table",
+            "Toolbar",
+            "Top Navigation Bar"
+        ],
+        "Overlay": [
+            "Bottom Sheet",
+            "Coach Marks",
+            "Dialog",
+            "Drawer",
+            "Dropdown Menu",
+            "Full-Screen Overlay",
+            "Toast",
+            "Tooltip"
+        ],
+        "Imagery": [
+            "Avatar",
+            "Icon",
+            "Illustration",
+            "Logo",
+            "Photo"
+        ]
+    }
+}

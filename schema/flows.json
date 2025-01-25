@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Schema for user flows within an application",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Unique identifier for the flow"
+        },
+        "app_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Reference to the parent application"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the user flow"
+        },
+        "description": {
+            "type": "string",
+            "description": "Detailed description of the flow's purpose"
+        },
+        "flow_type": {
+            "type": "string",
+            "description": "Type of user flow",
+            "enum": [
+                "Browsing Tutorial", "Creating Account", "Onboarding",
+                "Editing Profile", "Deleting & Deactivating Account", "Logging In",
+                "Logging Out", "Resetting Password", "Switching Account",
+                "Adding to Cart & Bag", "Booking & Reserving", "Canceling Order & Refunding",
+                "Canceling Subscription", "Listing", "Purchasing & Ordering",
+                "Redeeming", "Subscribing & Upgrading", "Transferring Money & Donating",
+                "Banning & Blocking", "Calling", "Chatting & Sending Messages",
+                "Commenting & Replying", "Following & Subscribing", "Gifting",
+                "Giving Feedback", "Inviting Teammates & Friends", "Joining & Accepting",
+                "Leaving", "Liking & Upvoting", "Muting", "Referring Friends",
+                "Registering", "Reporting", "Requesting", "Reviewing & Rating",
+                "Scheduling", "Sharing", "Adding & Creating", "Archiving",
+                "Copying & Duplicating", "Deleting & Removing", "Drawing",
+                "Editing & Updating", "Filtering & Sorting", "Importing & Exporting",
+                "Listening to Audio", "Logging & Tracking", "Marking", "Moving",
+                "Pinning", "Publishing", "Recording Audio & Video", "Reordering",
+                "Saving to Collection", "Scanning", "Searching & Finding",
+                "Selecting & Choosing", "Starting & Completing", "Taking Photos",
+                "Uploading & Downloading", "Watching Video", "Connecting & Linking",
+                "Enabling & Disabling", "Setting Up", "Showing & Hiding",
+                "Switching to Dark Mode", "Switching View", "Turning On/Off",
+                "Verifying", "Misc"
+            ],
+            "errorMessage": "Flow type must be one of the predefined types from FLOWS_ENUM"
+        },
+        "steps": {
+            "type": "array",
+            "description": "Ordered sequence of steps in the flow",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "order": {
+                        "type": "integer",
+                        "description": "Sequential order of the step"
+                    },
+                    "screen_id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "Reference to the screen for this step"
+                    },
+                    "interaction_id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "Reference to the interaction for this step"
+                    }
+                },
+                "required": ["order", "screen_id"]
+            }
+        }
+    },
+    "required": ["id", "app_id", "name", "flow_type", "steps"]
+}
